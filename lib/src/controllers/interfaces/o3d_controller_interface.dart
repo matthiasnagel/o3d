@@ -32,6 +32,16 @@ abstract class O3DControllerInterface {
   /// the camera will interpolate from its current position to the new value.
   void cameraTarget(double x, double y, double z);
 
+  /// [fieldOfView] function
+  /// Used to configure the vertical field of view of the camera. Accepts values
+  /// in both degrees and radians (e.g., "30deg" or "0.5rad"). Accepts any value
+  /// between the configured min and max field of view. Any time this value
+  /// changes from its initially configured value, the camera will interpolate
+  /// from its current value to the new value. Defaults to "auto", which sets
+  /// either the vertical or horizontal field of view to 45 degrees depending on
+  /// the dimensions of the model and the aspect ratio of the canvas.
+  void fieldOfView(String fieldOfView);
+
   /// [logger] for testing package in release mode
   ValueChanged<Object>? logger;
 

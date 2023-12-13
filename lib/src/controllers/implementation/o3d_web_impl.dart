@@ -23,6 +23,11 @@ class O3dImp implements O3DControllerInterface {
   }
 
   @override
+  void fieldOfView(String fieldOfView) {
+    context.callMethod("fieldOfView$id", [fieldOfView]);
+  }
+
+  @override
   void customJsCode(String code) {
     context.callMethod("customEvaluate$id", [code]);
   }

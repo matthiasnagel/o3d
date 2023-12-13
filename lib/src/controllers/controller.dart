@@ -13,6 +13,9 @@ class O3DController implements O3DControllerInterface {
       _dataSource.cameraTarget(x, y, z);
 
   @override
+  void fieldOfView(String fieldOfView) => _dataSource.fieldOfView(fieldOfView);
+
+  @override
   void customJsCode(String code) => _dataSource.customJsCode(code);
 
   @override

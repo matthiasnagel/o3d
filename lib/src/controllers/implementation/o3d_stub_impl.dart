@@ -29,6 +29,14 @@ class O3dImp implements O3DControllerInterface {
   }
 
   @override
+  void fieldOfView(String fieldOfView) {
+    webViewController?.runJavaScript('''(() => {
+        fieldOfView$id('$fieldOfView'); 
+      })();
+    ''');
+  }
+
+  @override
   void customJsCode(String code) {
     webViewController?.runJavaScript('''(() => {
         customEvaluate$id('$code'); 

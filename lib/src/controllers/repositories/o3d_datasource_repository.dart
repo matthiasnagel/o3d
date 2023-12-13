@@ -22,6 +22,9 @@ class O3dDataSource implements O3DControllerInterface {
       _o3dImp.cameraTarget(x, y, z);
 
   @override
+  void fieldOfView(String fieldOfView) => _o3dImp.fieldOfView(fieldOfView);
+
+  @override
   void customJsCode(String code) => _o3dImp.customJsCode(code);
 
   @override

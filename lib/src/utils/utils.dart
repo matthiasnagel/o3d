@@ -9,6 +9,7 @@ class Utils {
   String relatedJs({required String id}) => """
 cameraOrbit$id = (a, b, c) => {document.querySelector('#$id').cameraOrbit = `\${a}deg \${b}deg \${c}m`}
 cameraTarget$id = (x, y, z) => {document.querySelector('#$id').cameraTarget = `\${x}m \${y}m \${z}m`}
+fieldOfView$id = (fieldOfView) => {document.querySelector('#$id').fieldOfView = fieldOfView}
 customEvaluate$id = (code) => { eval(code) }
 animationName$id = (set) => { document.querySelector('#$id').setAttribute('animation-name', set); }
 availableAnimations$id = (set) => { return document.querySelector('#$id').availableAnimations; }
