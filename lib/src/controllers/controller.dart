@@ -16,6 +16,9 @@ class O3DController implements O3DControllerInterface {
   void fieldOfView(String fieldOfView) => _dataSource.fieldOfView(fieldOfView);
 
   @override
+  void setAttribute(String attribute, String value) => _dataSource.setAttribute(attribute, value);
+
+  @override
   void customJsCode(String code) => _dataSource.customJsCode(code);
 
   @override

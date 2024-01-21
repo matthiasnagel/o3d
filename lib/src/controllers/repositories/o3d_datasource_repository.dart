@@ -25,6 +25,9 @@ class O3dDataSource implements O3DControllerInterface {
   void fieldOfView(String fieldOfView) => _o3dImp.fieldOfView(fieldOfView);
 
   @override
+  void setAttribute(String attribute, String value) => _o3dImp.setAttribute(attribute, value);
+
+  @override
   void customJsCode(String code) => _o3dImp.customJsCode(code);
 
   @override

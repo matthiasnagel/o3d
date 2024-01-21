@@ -37,6 +37,14 @@ class O3dImp implements O3DControllerInterface {
   }
 
   @override
+  void setAttribute(String attribute, String value) {
+    webViewController?.runJavaScript('''(() => {
+        setAttribute$id('$attribute', '$value');
+      })();
+    ''');
+  }
+
+  @override
   void customJsCode(String code) {
     webViewController?.runJavaScript('''(() => {
         customEvaluate$id('$code'); 

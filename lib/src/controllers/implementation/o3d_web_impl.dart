@@ -28,6 +28,11 @@ class O3dImp implements O3DControllerInterface {
   }
 
   @override
+  void setAttribute(String attribute, String value) {
+    context.callMethod("setAttribute$id", [attribute, value]);
+  }
+
+  @override
   void customJsCode(String code) {
     context.callMethod("customEvaluate$id", [code]);
   }

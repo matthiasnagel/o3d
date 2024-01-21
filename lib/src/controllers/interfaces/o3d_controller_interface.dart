@@ -42,6 +42,10 @@ abstract class O3DControllerInterface {
   /// the dimensions of the model and the aspect ratio of the canvas.
   void fieldOfView(String fieldOfView);
 
+  /// [setAttribute] function
+  /// The URL to the 3D model. Only glTF/GLB models are supported.
+  void setAttribute(String attribute, String value);
+
   /// [logger] for testing package in release mode
   ValueChanged<Object>? logger;
 
